@@ -13,4 +13,10 @@ public interface IBiblioteca {
      */
 
     void cambiarEstado();
-}
+
+    public String named();
+
+
+    }
+
+

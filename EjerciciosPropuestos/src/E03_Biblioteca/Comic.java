@@ -4,7 +4,7 @@ public class Comic extends  AbstractPublicaciones{
 
     private int numero;
     private String coleccion;
-    private boolean prestado = false;
+    private boolean prestado;
 
     public Comic(){
         super();
@@ -55,9 +55,9 @@ public class Comic extends  AbstractPublicaciones{
         super.setNombre(nombre);
     }
 
-    @Override
+
     public String getFecha() {
-        return super.getFecha();
+        return fecha;
     }
 
     @Override
@@ -67,11 +67,7 @@ public class Comic extends  AbstractPublicaciones{
 
     @Override
     public boolean esPrestado() {
-        if (prestado =  true){
-            System.out.println("El libro esta prestado");
-        }else{
-            System.out.println("El libro esta disponible");
-        }
+
         return prestado;
     }
 
@@ -82,5 +78,10 @@ public class Comic extends  AbstractPublicaciones{
         if (prestado = false){
             setPrestado(true);}
         else{setPrestado(false);}
+    }
+
+    @Override
+    public String named() {
+        return this.nombre;
     }
 }

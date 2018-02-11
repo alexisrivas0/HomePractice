@@ -8,7 +8,7 @@ public class Libro extends AbstractPublicaciones{
     private String edicion;
     private String ISBN;
     private String autor;
-    private boolean prestado =  false;
+    private boolean prestado;
 
 
 
@@ -71,7 +71,7 @@ public class Libro extends AbstractPublicaciones{
 
     @Override
     public String getFecha() {
-        return super.getFecha();
+        return fecha;
     }
 
     @Override
@@ -81,11 +81,7 @@ public class Libro extends AbstractPublicaciones{
 
     @Override
     public boolean esPrestado() {
-        if (prestado =  true){
-            System.out.println("El libro esta prestado");
-        }else{
-            System.out.println("El libro esta disponible");
-        }
+
         return prestado;
     }
 
@@ -97,5 +93,8 @@ public class Libro extends AbstractPublicaciones{
             else{setPrestado(false);}
     }
 
-
+    @Override
+    public String named() {
+        return this.nombre;
+    }
 }
