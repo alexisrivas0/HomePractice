@@ -1,5 +1,6 @@
 package EjerciciosPOO.Libro;
 
+import java.io.PrintStream;
 import java.util.Scanner;
 
 public class Principal {
@@ -17,6 +18,8 @@ public class Principal {
 
     Libro libro2 = new Libro();
 
-
+    PrintStream ps = new PrintStream("asl-v20.txt");
+    ps.println("Esto es una cadena de caracteres")
+    ps.close();
 
 }
